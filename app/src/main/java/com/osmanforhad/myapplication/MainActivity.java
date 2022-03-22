@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Window;
+import android.view.WindowManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,7 +14,10 @@ public class MainActivity extends AppCompatActivity {
         //__Hide Title__//
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         //__Hide TitleBar__//
-        getSupportActionBar().hide();
-        setContentView(R.layout.activity_main);
+       getSupportActionBar().hide();
+       setContentView(R.layout.activity_main);
+
+        //__making full Screen Activity__//
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 }
